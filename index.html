@@ -1,0 +1,33 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skincare Finder</title>
+
+</head>
+
+<body>
+<div class="quiz-container">
+    <h1>Find Your Skincare Solution</h1>
+    <form id="skincare-quiz">
+        <p>How does your skin feel after washing?</p>
+        <input type="radio" name="q1" value="dry"> Dry<br>
+        <input type="radio" name="q1" value="normal"> Normal<br>
+        <input type="radio" name="q1" value="oily"> Oily<br><br>
+
+        <p>What is your main skin concern?</p>
+        <input type="radio" name="q2" value="acne"> Acne Breakout<br>
+        <input type="radio" name="q2" value="wrinkles"> Wrinkles and Fine Lines<br>
+        <input type="radio" name="q2" value="hydration"> Dry Skin<br><br>
+
+        <button type="button" onclick="calculateResults()">Get Results</button>
+    </form>
+    <div id="result"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
