@@ -6,7 +6,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skincare Finder</title>
-
 </head>
 
 <body>
@@ -23,7 +22,15 @@
         <input type="radio" name="q2" value="wrinkles"> Wrinkles and Fine Lines<br>
         <input type="radio" name="q2" value="hydration"> Dry Skin<br><br>
 
-        <button type="button" onclick="calculateResults()">Get Results</button>
+        <button type="button" onclick="getProducts()">Search products</button>
+        <label>Sort by:</label>
+        <select id="sort">
+            <option value="">Relevance</option>
+            <option value="&sortBy=price%3A0">Price: Low to High</option>
+            <option value="&sortBy=price%3A1">Price: High to Low</option>
+        </select>
+        <ul id="products">
+        </ul>
     </form>
     <div id="result"></div>
 </div>
