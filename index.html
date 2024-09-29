@@ -1,40 +1,66 @@
-<!-- index.html -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skincare Finder</title>
+    <link rel="stylesheet" href="glowstyle.css">
+
+    <title>GlowGuide</title>
 </head>
 
 <body>
+
+<h1>GlowGuide</h1>
+<h2>Find Your Skincare Solution</h2>
+
+<p>Discover the perfect skincare routine tailored just for you!
+    GlowGuide helps you find the ideal products based on your skin type, concerns, and lifestyle.
+    Whether you're looking to hydrate, brighten, or combat breakouts, our quiz provides product recommendations to help you achieve a glowing, healthy complexion.
+    Get ready to glow from the inside out with personalized skincare tips designed to suit your unique needs</p>
+
+<p>We don’t just recommend products—we empower you with skincare tips and insights that evolve with your needs.
+    GlowGuide is designed for all skin types and levels of experience, from skincare newbies to seasoned beauty enthusiasts.
+    Let us guide you to glowing, radiant skin that feels as good as it looks!</p>
+
 <div class="quiz-container">
-    <h1>Find Your Skincare Solution</h1>
+    <h4>Start the Quiz</h4>
+
     <form id="skincare-quiz">
         <p>How does your skin feel after washing?</p>
-        <input type="radio" name="q1" value="dry"> Dry<br>
-        <input type="radio" name="q1" value="normal"> Normal<br>
-        <input type="radio" name="q1" value="oily"> Oily<br><br>
+        <input type="radio" name="q1" value="dry"> Dry <br>
+        <input type="radio" name="q1" value="oily"> Oily <br>
+        <input type="radio" name="q1" value="normal"> Normal <br>
+        <input type="radio" name="q1" value="combination"> Combination <br><br>
 
         <p>What is your main skin concern?</p>
-        <input type="radio" name="q2" value="acne"> Acne Breakout<br>
-        <input type="radio" name="q2" value="wrinkles"> Wrinkles and Fine Lines<br>
-        <input type="radio" name="q2" value="hydration"> Dry Skin<br><br>
+        <input type="radio" name="q2" value="acne"> Acne Breakout <br>
+        <input type="radio" name="q2" value="wrinkles"> Wrinkles and Fine Lines <br>
+        <input type="radio" name="q2" value="hydration"> Dry Skin <br>
+        <input type="radio" name="q2" value="eczema"> Eczema <br>
 
         <button type="button" onclick="getProducts()">Search products</button>
+
         <label>Sort by:</label>
         <select id="sort">
             <option value="">Relevance</option>
             <option value="&sortBy=price%3A0">Price: Low to High</option>
             <option value="&sortBy=price%3A1">Price: High to Low</option>
         </select>
-        <ul id="products">
-        </ul>
+        <ul id="products"> </ul>
     </form>
     <div id="result"></div>
 </div>
 
+<div class = "glowbot">
+    <h4>Not sure where to begin with your skincare routine? We’ve got you covered!</h4>
+    <p>Starting a skincare routine can feel overwhelming, but we make it easy.
+        Whether you're new to skincare or looking to refresh your current routine,
+        we’ll help you find the perfect products to address your skin type and concerns.
+        No more guessing—let us guide you step by step to radiant, healthy skin with products tailored specifically to your needs! </p>
+</div>
+
 <script src="script.js"></script>
+
 </body>
 </html>
