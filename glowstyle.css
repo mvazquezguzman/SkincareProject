@@ -5,46 +5,53 @@
     font-family: 'Helvetica Neue', sans-serif;
 }
 
-body {
-    background-color: #fafafa;
-    color: #333;
+body
+{
+    background-color: #eeeee8;
+    color: #4a422e;
     line-height: 1.6;
     padding: 20px;
 }
 
-header {
+header
+{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #ffffff;
-    border-bottom: 1px solid #eee;
+    background-color: #e5e4d2;
+    border-bottom: 1px solid #c0b5a7;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-header .logo h1 {
+header .logo h1
+{
     font-size: 2.5rem;
-    color: #ff9990;
+    color: #6b4a3c;
 }
 
-nav {
+nav
+{
     display: flex;
     gap: 20px;
 }
 
-nav a {
+nav a
+{
     text-decoration: none;
-    color: #333;
+    color: #4a422e;
     font-size: 1.2rem;
     padding: 10px;
 }
 
-nav a:hover {
-    color: #ff9990;
+nav a:hover
+{
+    color: #917b66;
 }
 
-.hero {
-    background-color: #f8f4f2;
+.hero
+{
+    background-color: #e5d5c9;
     padding: 50px 20px;
     display: flex;
     justify-content: center;
@@ -53,39 +60,46 @@ nav a:hover {
     position: relative;
 }
 
-.hero-content {
+.hero-content
+{
     z-index: 2;
     max-width: 600px;
-    color: #333;
+    color: #4a422e;
 }
 
-.hero h2 {
+.hero h2
+{
     font-size: 2.8rem;
-    color: #ff9990;
+    color: #6b4a3c;
     margin-bottom: 20px;
 }
 
-.hero p {
+.hero p
+{
     font-size: 1.2rem;
     line-height: 1.8;
     margin-bottom: 20px;
+    color: #726745;
 }
 
-.cta-btn {
+.cta-btn
+{
     display: inline-block;
     padding: 10px 20px;
-    background-color: #ff9990;
+    background-color: #a4837c;
     color: #fff;
     text-decoration: none;
     font-size: 1.2rem;
     border-radius: 50px;
 }
 
-.cta-btn:hover {
-    background-color: #ff7870;
+.cta-btn:hover
+{
+    background-color: #917b66;
 }
 
-.hero::before {
+.hero::before
+{
     content: "";
     position: absolute;
     top: 0;
@@ -100,46 +114,65 @@ nav a:hover {
     border-radius: 10px;
 }
 
-section.about {
+section.about
+{
     padding: 40px 20px;
-    background-color: #ffffff;
+    background-color: #eeeee8;
     text-align: center;
     margin-top: 30px;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-.about h3 {
+.about h3
+{
     font-size: 2.2rem;
-    color: #ff9990;
+    color: #6b4a3c;
     margin-bottom: 20px;
 }
 
-.about p {
+.about p
+{
     font-size: 1.1rem;
-    color: #666;
+    color: #726745;
     line-height: 1.8;
     margin-bottom: 30px;
 }
 
-.quiz-section {
+.glow-paragraph
+{
+    font-size: 1.1rem;
+    color: #726745;
+    line-height: 1.8;
+    margin: 30px 0;
+    background-color: #e5e4d2;
+    padding: 20px;
+    border-left: 5px solid #6b4a3c;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+}
+
+.quiz-section
+{
     padding: 40px 20px;
-    background-color: #f9f9f9;
-    text-align: lefts;
+    background-color: #eeeee8;
+    text-align: center;
     margin-top: 30px;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .quiz-section h4 {
-    font-size: 1.8rem;
-    color: #ff9990;
+    font-size: 2rem;
+    color: #6b4a3c;
     margin-bottom: 20px;
 }
 
-.quiz-section button {
+.quiz-section button
+{
     padding: 10px 20px;
-    background-color: #ff9990;
+    background-color: #a4837c;
     color: #fff;
     border: none;
     border-radius: 50px;
@@ -147,26 +180,28 @@ section.about {
     cursor: pointer;
 }
 
-.quiz-section button:hover {
-    background-color: #ff7870;
+.quiz-section button:hover
+{
+    background-color: #917b66;
 }
 
-.quiz-section input[type="radio"] {
+.quiz-section input[type="radio"]
+{
     margin: 10px;
 }
 
-#keywordsearch label {
+#keywordsearch label
+{
     font-size: 1.2rem;
     margin-top: 20px;
     display: inline-block;
+    color: #4a422e;
 }
 
-footer {
+footer
+{
     text-align: center;
-    padding: 20px;
-    background-color: #f8f4f2;
-    color: #777;
-    margin-top: 30px;
-    border-top: 1px solid #eee;
+    margin-top: 20px;
+    color: #726745;
 }
 
