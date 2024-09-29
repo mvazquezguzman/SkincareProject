@@ -56,7 +56,11 @@ fetch(apiUrl, options)
         heroImage.src = products[i].heroImage;
         heroImage.width = "200";
         heroImage.height = "200";
-        card.appendChild(heroImage);
+        var imageLink = document.createElement("a");
+        imageLink.href = "https://sephora.com" + products[i].targetUrl;
+        imageLink.target = "_blank";
+        imageLink.appendChild(heroImage);
+        card.appendChild(imageLink);
         console.log("Image info: " + heroImage.src);
         card.appendChild(document.createTextNode(products[i].displayName.toUpperCase()));
         var li = document.createElement('li');
