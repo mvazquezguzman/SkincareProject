@@ -103,6 +103,20 @@
     <div id="result"></div>
 </section>
 
+<script>
+    window.watsonAssistantChatOptions = {
+      integrationID: "88b08483-b41a-43fa-b13d-eb47d6a463ae", // The ID of this integration.
+      region: "us-south", // The region your integration is hosted in.
+      serviceInstanceID: "9dee9b2f-bcf6-4e72-aa3a-a11a9547049d", // The ID of your service instance.
+      onLoad: async (instance) => { await instance.render(); }
+    };
+    setTimeout(function(){
+      const t=document.createElement('script');
+      t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+      document.head.appendChild(t);
+    });
+  </script>
+
 <footer>&copy; Copyright 2024 GlowGuide | HackGT 11: Circus of Invention</footer>
 
 <script src="script.js"></script>
