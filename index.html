@@ -56,6 +56,7 @@
     <h4>Start Quiz</h4>
 
     <button id="switchMode" onclick="switchMode()">Don't know what to search? Click here</button>
+
     <form id="skincare-quiz" style = "visibility: hidden; max-height: 0;">
             <p>How does your skin feel after washing?</p>
             <input type="radio" name="q1" value="dry"> Dry <br>
@@ -70,11 +71,15 @@
             <input type="radio" name="q2" value="eczema"> Eczema <br>
     </form>
 
+    <br>
+
     <div id = "keywordsearch">
         <label>Keywords: </label>
-        <input type="text" id="keywords"> <br>
+        <input type="text" id="keywords">
+        <br>
     </div>
 
+    <br>
 
         <button type="button" onclick="getProducts()">Search products</button>
         <label>Sort by:</label>
@@ -83,10 +88,11 @@
             <option value="&sortBy=price%3A0">Price: Low to High</option>
             <option value="&sortBy=price%3A1">Price: High to Low</option>
         </select>
-        <ul id="products" style="list-style: none"></ul>
-        <img src="loading.gif" style="visibility: hidden" id="loading" width="200px" height="200px">
-    </form>
-        <ul id="products"></ul>
+
+        <ul id="products" style = "list-style: none"> </ul>
+        <img src="loading.gif" style = "visibility: hidden" id="loading" width="50px" height="50px">
+
+
     <div id="result"></div>
 </section>
 
