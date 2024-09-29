@@ -10,8 +10,8 @@ const options = {
 async function getProducts() {
 var list = document.getElementById("products");
 list.innerHTML = "";
-var img = document.getElementById("loading");
-img.style.visibility = "visible";
+var loadingImage = document.getElementById("loading");
+loadingImage.style.visibility = "visible";
 var dropdown = document.getElementById("sort").value;
 var form = document.getElementById("skincare-quiz");
 var textField;
@@ -48,11 +48,19 @@ fetch(apiUrl, options)
     return response.json();
   })
   .then(data => {
-    img.style.visibility = "hidden";
+    loadingImage.style.visibility = "hidden";
     var products = data.products;
     for (var i = 0; i < products.length; i++) {
+        var card = document.createElement("div");
+        var heroImage = document.createElement("img");
+        heroImage.src = products[i].heroImage;
+        heroImage.width = "200";
+        heroImage.height = "200";
+        card.appendChild(heroImage);
+        console.log("Image info: " + heroImage.src);
+        card.appendChild(document.createTextNode(products[i].displayName.toUpperCase()));
         var li = document.createElement('li');
-        li.appendChild(document.createTextNode(products[i].displayName));
+        li.appendChild(card);
         list.appendChild(li);
     }
   })
@@ -64,13 +72,16 @@ fetch(apiUrl, options)
 async function switchMode() {
     var form = document.getElementById("skincare-quiz");
     var keywordsearch = document.getElementById("keywordsearch");
+    var button = document.getElementById("switchMode");
 
     if (form.style.visibility === "hidden") {
+        button.innerText = "Want to get more specific with your search? Click here";
         form.style.visibility = "visible";
         form.style.maxHeight = "none";
         keywordsearch.style.visibility =  "hidden";
         keywordsearch.style.maxHeight = "0";
     } else {
+        button.innerText = "Don't know what to search? Click here";
         keywordsearch.style.visibility = "visible";
         keywordsearch.style.maxHeight = "none";
         form.style.visibility =  "hidden";
