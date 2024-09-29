@@ -36,6 +36,15 @@ if (form.style.visibility === "hidden") {
           break;
         }
     }
+
+    var productType = document.querySelectorAll("input[name = 'q3']")
+
+    for (const type of productType) {
+        if (type.checked) {
+          textField = textField + type.value;
+          break;
+        }
+    }
 }
 
 var keywords = textField.replace(/ /g,'');
@@ -62,7 +71,7 @@ fetch(apiUrl, options)
         imageLink.appendChild(heroImage);
         card.appendChild(imageLink);
         console.log("Image info: " + heroImage.src);
-        card.appendChild(document.createTextNode(products[i].displayName.toUpperCase()));
+        card.appendChild(document.createTextNode(products[i].displayName.toUpperCase() + ", Price: " + products[i].currentSku.listPrice));
         var li = document.createElement('li');
         li.appendChild(card);
         list.appendChild(li);
