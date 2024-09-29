@@ -1,70 +1,93 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang = "en-US">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="glowstyle.css">
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+    <link rel = "stylesheet" href = "glowstyle.css">
 
     <title>GlowGuide</title>
 </head>
 
 <body>
 
-<h1>GlowGuide</h1>
-<h2>Find Your Skincare Solution</h2>
-
-<p>Discover the perfect skincare routine tailored just for you!
-    GlowGuide helps you find the ideal products based on your skin type, concerns, and lifestyle.
-    Whether you're looking to hydrate, brighten, or combat breakouts, our quiz provides product recommendations to help you achieve a glowing, healthy complexion.
-    Get ready to glow from the inside out with personalized skincare tips designed to suit your unique needs</p>
-
-<p>We don’t just recommend products—we empower you with skincare tips and insights that evolve with your needs.
-    GlowGuide is designed for all skin types and levels of experience, from skincare newbies to seasoned beauty enthusiasts.
-    Let us guide you to glowing, radiant skin that feels as good as it looks!</p>
-
-<div class="quiz-container">
-    <button id="switchMode" onclick="switchMode()">Don't know what to search? Click here</button>
-    <form id="skincare-quiz" style="visibility: hidden; max-height: 0;">
-        <p>How does your skin feel after washing?</p>
-        <input type="radio" name="q1" value="dry"> Dry <br>
-        <input type="radio" name="q1" value="oily"> Oily <br>
-        <input type="radio" name="q1" value="normal"> Normal <br>
-        <input type="radio" name="q1" value="combination"> Combination <br><br>
-
-        <p>What is your main skin concern?</p>
-        <input type="radio" name="q2" value="acne"> Acne Breakout <br>
-        <input type="radio" name="q2" value="wrinkles"> Wrinkles and Fine Lines <br>
-        <input type="radio" name="q2" value="hydration"> Dry Skin <br>
-        <input type="radio" name="q2" value="eczema"> Eczema <br>
-
-    </form>
-
-    <div id="keywordsearch">
-        <label>Keywords:</label><br>
-        <input type="text" id="keywords"><br>
+<header>
+    <div class = "logo">
+        <h1>GlowGuide</h1>
     </div>
 
-        <button type="button" onclick="getProducts()">Search products</button>
+    <nav aria-label = "Main navigation">
+        <a href = "index.html"> Home</a>
+        <a href = "#glowbot"> About Us</a>
+        <a href = "#quiz-container"> Quiz</a>
+    </nav>
+</header>
 
+<section class = "hero">
+    <div class = "hero-content">
+        <h2>Find Your Skincare Solution</h2>
+        <p>
+            Discover the perfect skincare routine tailored just for you!
+            GlowGuide helps you find the ideal products based on your skin type, concerns, and lifestyle.
+            Whether you're looking to hydrate, brighten, or combat breakouts, our quiz provides product recommendations to help you achieve a glowing, healthy complexion.
+            Get ready to glow from the inside out with personalized skincare tips designed to suit your unique needs.
+        </p>
+        <a href = "#quiz-container" class = "cta-btn"> Take the Quiz</a>
+    </div>
+</section>
+
+<p>
+    We don’t just recommend products—we empower you with skincare tips and insights that evolve with your needs.
+    GlowGuide is designed for all skin types and levels of experience, from skincare newbies to seasoned beauty enthusiasts.
+    Let us guide you to glowing, radiant skin that feels as good as it looks!
+</p>
+
+<section class = "about" id = "glowbot">
+    <h3>Not sure where to begin with your skincare routine? We’ve got you covered!</h3>
+    <p>
+        Starting a skincare routine can feel overwhelming, but we make it easy.
+        Whether you're new to skincare or looking to refresh your current routine,
+        we’ll help you find the perfect products to address your skin type and concerns.
+        No more guessing—let us guide you step by step to radiant, healthy skin with products tailored specifically to your needs!
+    </p>
+</section>
+
+<section class="quiz-section" id="quiz-container">
+    <h4>Start Quiz</h4>
+
+    <button id="switchMode" onclick="switchMode()">Don't know what to search? Click here</button>
+    <form id="skincare-quiz" style = "visibility: hidden; max-height: 0;">
+            <p>How does your skin feel after washing?</p>
+            <input type="radio" name="q1" value="dry"> Dry <br>
+            <input type="radio" name="q1" value="oily"> Oily <br>
+            <input type="radio" name="q1" value="normal"> Normal <br>
+            <input type="radio" name="q1" value="combination"> Combination <br>
+
+            <p>What is your main skin concern?</p>
+            <input type="radio" name="q2" value="acne"> Acne Breakout <br>
+            <input type="radio" name="q2" value="wrinkles"> Wrinkles and Fine Lines <br>
+            <input type="radio" name="q2" value="hydration"> Dry Skin <br>
+            <input type="radio" name="q2" value="eczema"> Eczema <br>
+    </form>
+
+    <div id = "keywordsearch">
+        <label>Keywords: </label>
+        <input type="text" id="keywords"> <br>
+    </div>
+
+
+        <button type="button" onclick="getProducts()">Search products</button>
         <label>Sort by:</label>
         <select id="sort">
             <option value="">Relevance</option>
             <option value="&sortBy=price%3A0">Price: Low to High</option>
             <option value="&sortBy=price%3A1">Price: High to Low</option>
         </select>
-        <ul id="products"> </ul>
-    </form>
+        <ul id="products"></ul>
     <div id="result"></div>
-</div>
+</section>
 
-<div class = "glowbot">
-    <h4>Not sure where to begin with your skincare routine? We’ve got you covered!</h4>
-    <p>Starting a skincare routine can feel overwhelming, but we make it easy.
-        Whether you're new to skincare or looking to refresh your current routine,
-        we’ll help you find the perfect products to address your skin type and concerns.
-        No more guessing—let us guide you step by step to radiant, healthy skin with products tailored specifically to your needs! </p>
-</div>
+<footer>&copy; Copyright 2024 GlowGuide | HackGT 11: Circus of Invention</footer>
 
 <script src="script.js"></script>
 
