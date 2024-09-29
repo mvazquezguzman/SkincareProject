@@ -10,6 +10,8 @@ const options = {
 async function getProducts() {
 var list = document.getElementById("products");
 list.innerHTML = "";
+var img = document.getElementById("loading");
+img.style.visibility = "visible";
 var dropdown = document.getElementById("sort").value;
 var form = document.getElementById("skincare-quiz");
 var textField;
@@ -46,6 +48,7 @@ fetch(apiUrl, options)
     return response.json();
   })
   .then(data => {
+    img.style.visibility = "hidden";
     var products = data.products;
     for (var i = 0; i < products.length; i++) {
         var li = document.createElement('li');
