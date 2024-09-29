@@ -9,7 +9,9 @@ const options = {
 
 async function getProducts() {
 var dropdown = document.getElementById("sort").value;
-const apiUrl = url + '/us/products/v2/search?pageSize=60&currentPage=1&q=eczema' + dropdown;
+var textField = document.getElementById("keywords").value;
+var keywords = textField.replace(/ /g,'');
+const apiUrl = url + '/us/products/v2/search?pageSize=10&currentPage=1&q=' + keywords +  dropdown;
 fetch(apiUrl, options)
   .then(response => {
     if (!response.ok) {
