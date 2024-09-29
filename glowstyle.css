@@ -1,0 +1,156 @@
+/* General Styles */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f3f1; /* Soft skin-tone inspired background */
+    color: #333; /* Text color */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fbecec; /* Soft neutral pink header */
+}
+
+.logo h1 {
+    font-size: 2.5em;
+    color: #705c5c; /* Warm, subtle taupe color */
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #705c5c;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #9a7b7b; /* Lighter taupe on hover */
+}
+
+/* Hero Section */
+.hero {
+    background-color: #f3e8e7; /* Soft blush background */
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.hero-text h2 {
+    font-size: 3em;
+    color: #705c5c;
+}
+
+.hero-text p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 20px auto;
+    color: #555; /* Darker gray for text */
+}
+
+.cta-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #b09c9c; /* Muted pinkish-gray */
+    color: white;
+    border-radius: 30px;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+.cta-btn:hover {
+    background-color: #d1b5b5; /* Slightly lighter neutral pink on hover */
+}
+
+/* About Section */
+.about {
+    padding: 60px 20px;
+    background-color: #fff; /* White background for contrast */
+    text-align: center;
+}
+
+.about h3 {
+    font-size: 2em;
+    color: #705c5c;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.1em;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #666;
+}
+
+/* Quiz Section */
+.quiz-section {
+    padding: 60px 20px;
+    background-color: #f3e8e7; /* Blush background */
+}
+
+.quiz-section h4 {
+    font-size: 2em;
+    color: #705c5c;
+    text-align: center;
+}
+
+.quiz-question p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.quiz-question input {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+#keywords {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #b09c9c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #d1b5b5;
+}
+
+select {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    background-color: #fbecec;
+    color: #555;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    margin-top: 40px;
+}
+
+footer a {
+    color: #705c5c;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
