@@ -24,9 +24,8 @@
     Let us guide you to glowing, radiant skin that feels as good as it looks!</p>
 
 <div class="quiz-container">
-    <h4>Start the Quiz</h4>
-
-    <form id="skincare-quiz">
+    <button id="switchMode" onclick="switchMode()">Don't know what to search? Click here</button>
+    <form id="skincare-quiz" style="visibility: hidden; max-height: 0;">
         <p>How does your skin feel after washing?</p>
         <input type="radio" name="q1" value="dry"> Dry <br>
         <input type="radio" name="q1" value="oily"> Oily <br>
@@ -38,8 +37,13 @@
         <input type="radio" name="q2" value="wrinkles"> Wrinkles and Fine Lines <br>
         <input type="radio" name="q2" value="hydration"> Dry Skin <br>
         <input type="radio" name="q2" value="eczema"> Eczema <br>
-        <label></label>Keywords:<br>
+
+    </form>
+
+    <div id="keywordsearch">
+        <label>Keywords:</label><br>
         <input type="text" id="keywords"><br>
+    </div>
 
         <button type="button" onclick="getProducts()">Search products</button>
 
